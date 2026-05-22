@@ -10,14 +10,14 @@ The landing page for all of AJ's web projects. Each card links out to the projec
 
 ## Linked projects
 
-| Project | Repo | URL (Cloudflare Pages) |
+| Project | Repo | URL (Cloudflare Workers) |
 |---|---|---|
-| Gravity Simulator | ajgravitysimulator | https://ajgravitysimulator.pages.dev/ |
-| Periodic Table | ajperiodictable | https://ajperiodictable.pages.dev/ |
-| Knockoff Clash Royale | ajknockoffclashroyale | https://ajknockoffclashroyale.pages.dev/ |
-| Nuclear Effects Simulator | ajnukesimulator | https://ajnukesimulator.pages.dev/ |
+| Gravity Simulator | ajgravitysimulator | https://ajgravitysimulator.ajt3317.workers.dev/ |
+| Periodic Table | ajperiodictable | https://ajperiodictable.ajt3317.workers.dev/ |
+| Knockoff Clash Royale | ajknockoffclashroyale | https://ajknockoffclashroyale.ajt3317.workers.dev/ |
+| Nuclear Effects Simulator | ajnukesimulator | https://ajnukesimulator.ajt3317.workers.dev/ |
 
-> **Note:** These URLs assume each Cloudflare Pages project is named the same as its repo (`ajgravitysimulator`, etc.). If you pick different Cloudflare project names — or set up a custom domain — update the four `<a href>` URLs in `index.html` accordingly. Until each project is deployed, its card will 404.
+> **Note:** Each project is deployed as a Cloudflare Worker (static-assets Worker), at `<project-name>.ajt3317.workers.dev`. If you rename a Worker or set up a custom domain, update the matching `<a href>` URL in `index.html`.
 
 ## Running locally
 
