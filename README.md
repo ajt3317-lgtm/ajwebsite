@@ -10,14 +10,14 @@ The landing page for all of AJ's web projects. Each card links out to the projec
 
 ## Linked projects
 
-| Project | Repo | Current URL (Netlify) |
+| Project | Repo | URL (Cloudflare Pages) |
 |---|---|---|
-| Gravity Simulator | ajgravitysimulator | https://ajgravitysimulator.netlify.app/ |
-| Periodic Table | ajperiodictable | https://ajperiodictable.netlify.app/ |
-| Knockoff Clash Royale | ajknockoffclashroyale | https://ajknockoffclashroyale.netlify.app/ |
-| Nuclear Effects Simulator | ajnukesimulator | https://ajnukesimulator.netlify.app/ |
+| Gravity Simulator | ajgravitysimulator | https://ajgravitysimulator.pages.dev/ |
+| Periodic Table | ajperiodictable | https://ajperiodictable.pages.dev/ |
+| Knockoff Clash Royale | ajknockoffclashroyale | https://ajknockoffclashroyale.pages.dev/ |
+| Nuclear Effects Simulator | ajnukesimulator | https://ajnukesimulator.pages.dev/ |
 
-> **TODO when migrating to Cloudflare Pages:** Once each project repo is deployed to Cloudflare Pages, update the four `<a href>` URLs in `index.html` to point at the new `*.pages.dev` (or custom-domain) URLs. The current Netlify URLs are left in for now so the hub keeps working during the migration.
+> **Note:** These URLs assume each Cloudflare Pages project is named the same as its repo (`ajgravitysimulator`, etc.). If you pick different Cloudflare project names — or set up a custom domain — update the four `<a href>` URLs in `index.html` accordingly. Until each project is deployed, its card will 404.
 
 ## Running locally
 
