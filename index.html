@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AJ's Projects</title>
+<meta name="description" content="A hub for all of AJ's web projects — gravity simulator, periodic table, and more.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #0c0c10;
+    --card: #16161d;
+    --card-hover: #1d1d27;
+    --border: #2a2a36;
+    --text: #f0f0f5;
+    --muted: #9a9aae;
+  }
+
+  html, body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    min-height: 100%;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 64px 24px 80px;
+    background:
+      radial-gradient(800px 500px at 15% -10%, rgba(99,102,241,0.18), transparent 70%),
+      radial-gradient(800px 500px at 95% 10%, rgba(236,72,153,0.14), transparent 70%),
+      var(--bg);
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 56px;
+    max-width: 640px;
+  }
+
+  h1 {
+    font-size: clamp(2.4rem, 6vw, 3.6rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    background: linear-gradient(120deg, #818cf8, #f472b6, #facc15);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  header p {
+    margin-top: 14px;
+    font-size: 1.05rem;
+    color: var(--muted);
+    font-weight: 300;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+    width: 100%;
+    max-width: 960px;
+  }
+
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 28px;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+    transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+  }
+
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 4px;
+    background: var(--accent);
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    background: var(--card-hover);
+    border-color: var(--accent-border);
+  }
+
+  .icon {
+    font-size: 2.6rem;
+    line-height: 1;
+    margin-bottom: 18px;
+  }
+
+  .card h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .card p {
+    margin-top: 8px;
+    font-size: 0.95rem;
+    color: var(--muted);
+    font-weight: 300;
+    flex-grow: 1;
+  }
+
+  .visit {
+    margin-top: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent-text);
+  }
+
+  .visit .arrow { transition: transform 0.18s ease; }
+  .card:hover .visit .arrow { transform: translateX(4px); }
+
+  footer {
+    margin-top: 64px;
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-weight: 300;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>AJ's Projects</h1>
+  <p>A collection of interactive web projects I've built. Pick one to explore.</p>
+</header>
+
+<main class="grid">
+
+  <a class="card" href="https://ajgravitysimulator.netlify.app/"
+     style="--accent: linear-gradient(90deg,#6366f1,#818cf8); --accent-border:#6366f1; --accent-text:#a5b4fc;">
+    <div class="icon">&#127756;</div>
+    <h2>Gravity Simulator</h2>
+    <p>An interactive N-body gravity simulation with orbiting planets and real-time controls.</p>
+    <span class="visit">Launch <span class="arrow">&rarr;</span></span>
+  </a>
+
+  <a class="card" href="https://ajperiodictable.netlify.app/"
+     style="--accent: linear-gradient(90deg,#ec4899,#f472b6); --accent-border:#ec4899; --accent-text:#f9a8d4;">
+    <div class="icon">&#9883;</div>
+    <h2>Periodic Table</h2>
+    <p>An interactive periodic table of the elements, with language support and an antimatter mode.</p>
+    <span class="visit">Launch <span class="arrow">&rarr;</span></span>
+  </a>
+
+  <a class="card" href="https://ajknockoffclashroyale.netlify.app/"
+     style="--accent: linear-gradient(90deg,#f59e0b,#facc15); --accent-border:#f59e0b; --accent-text:#fcd34d;">
+    <div class="icon">&#9876;</div>
+    <h2>Knockoff Clash Royale</h2>
+    <p>A browser-based arena battler — my own take on the tower-defense card game.</p>
+    <span class="visit">Launch <span class="arrow">&rarr;</span></span>
+  </a>
+
+  <a class="card" href="https://ajnukesimulator.netlify.app/"
+     style="--accent: linear-gradient(90deg,#ef4444,#f97316); --accent-border:#ef4444; --accent-text:#fca5a5;">
+    <div class="icon">&#9762;</div>
+    <h2>Nuclear Effects Simulator</h2>
+    <p>An educational simulator for nuclear blast effects, plus a ballistic missile launch game.</p>
+    <span class="visit">Launch <span class="arrow">&rarr;</span></span>
+  </a>
+
+</main>
+
+<footer>Built by AJ &middot; 2026</footer>
+
+</body>
+</html>
