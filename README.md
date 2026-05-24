@@ -2,8 +2,6 @@
 
 The landing page for all of AJ's web projects. Each card links out to the project's own deployed site.
 
-**Live site:** _(add the Cloudflare Pages URL here once deployed)_
-
 ## What's in here
 
 - `index.html` — the hub page. Each card is a `<a href="...">` pointing at the project's deployed URL.
